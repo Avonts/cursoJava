@@ -1,6 +1,5 @@
 package model.entities;
 
-public interface Shape {
+public class Shape {
 
-	double area();
 }
