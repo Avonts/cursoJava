@@ -3,7 +3,6 @@ package application;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
-import java.rmi.server.LogStream;
 import java.time.Instant;
 import java.util.Date;
 import java.util.HashSet;
@@ -42,11 +41,11 @@ public class ExLogsSet {
 			}
 
 			System.out.println("Total de usuários: " + set.size());
-			
+
 			for (LogEntry log : set) {
 				System.out.println(log);
 			}
-			
+
 		} catch (IOException e) {
 			System.out.println(e.getMessage());
 		}
