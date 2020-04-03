@@ -5,12 +5,12 @@ import java.util.List;
 import java.util.Locale;
 
 import model.entities.Product;
+import model.services.ProductService;
 
-public class ExConsumer {
+public class ExRecebendoFuncoesDeParametro {
 
 	public static void main(String[] args) {
 
-		
 		Locale.setDefault(Locale.US);
 		List<Product> list = new ArrayList<>();
 
@@ -19,11 +19,10 @@ public class ExConsumer {
 		list.add(new Product("Tablet", 350.50));
 		list.add(new Product("HD case", 80.90));
 		
-		double factor = 1.1;
-
-		list.forEach(p -> p.setPrice(p.getPrice() * factor));
-
-		list.forEach(System.out::println);
+		ProductService ps = new ProductService();
+		double sum = ps.filteredSum(list, p -> p.getPrice() < 100);
+		
+		System.out.println("Sum: R$" + sum);
 
 	}
 

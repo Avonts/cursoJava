@@ -1,6 +1,6 @@
 package model.entities;
 
-public class Rectangle implements Shape{
+public class Rectangle{
 
 	private double width;
 	private double height;
@@ -30,7 +30,6 @@ public class Rectangle implements Shape{
 		this.height = height;
 	}
 	
-	@Override
 	public double area() {
 		return width * height;
 	}

@@ -7,7 +7,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import model.entities.Product;
-import model.services.CalculationService;
 
 public class ConsultoriaMax {
 
@@ -27,9 +26,9 @@ public class ConsultoriaMax {
 				product = br.readLine();
 			}
 
-			Product x = CalculationService.max(list);
+			//Product x = CalculationService.max(list);
 			System.out.println("Most expensive: ");
-			System.out.println(x);
+			//System.out.println(x);
 
 		} catch (IOException e) {
 			System.out.println("Error: " + e.getMessage());

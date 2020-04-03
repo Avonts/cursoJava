@@ -2,8 +2,8 @@ package model.entities;
 
 public class Product {
 
-	protected String name;
-	protected double price;
+	private String name;
+	private Double price;
 
 	public Product() {
 	}
@@ -12,10 +12,7 @@ public class Product {
 		this.name = name;
 		this.price = price;
 	}
-
-	// Getters e Setters
-
-	// Name
+	
 	public String getName() {
 		return this.name;
 	}
@@ -23,8 +20,6 @@ public class Product {
 	public void setName(String name) {
 		this.name = name;
 	}
-
-	// Price
 	public double getPrice() {
 		return this.price;
 	}
@@ -33,11 +28,15 @@ public class Product {
 		this.price = price;
 	}
 
-	// Métodos da classe
-
 	public String priceTag() {
-
 		return "\nNome: " + this.name + " Preço: R$" + String.format("%.2f", this.price);
 	}
+
+	@Override
+	public String toString() {
+		return "Product [name=" + name + ", price=" + price + "]";
+	}
+	
+	
 
 }
